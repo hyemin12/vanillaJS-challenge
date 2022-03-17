@@ -1,0 +1,152 @@
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li,
+span,
+div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  width: 100vw;
+  min-width: 1300px;
+  overflow-x: auto;
+}
+.title {
+  padding: 20px 0;
+  text-align: center;
+}
+.challenge-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.challenge-wrapper .file-list {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.challenge-wrapper .name {
+  display: block;
+  width: 100%;
+  background-color: #333;
+  padding: 5px 0;
+  color: #fff;
+  text-align: center;
+}
+.challenge-wrapper .file-list li.name.active {
+  color: aqua;
+}
+.tab-list > li {
+  display: none;
+}
+.tab-list > li.active {
+  display: block;
+}
+
+.challenge-wrapper a {
+  width: 300px;
+  border: 2px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+.challenge-wrapper a:hover {
+  color: aqua;
+  background-color: #666;
+}
+.challenge-wrapper a .item-img {
+  width: 300px;
+  height: 150px;
+  border: 1px solid #ccc;
+  object-fit: cover;
+}
+.challenge-wrapper a p {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+/* BROSWER */
+.challenge-html {
+  width: 640px;
+  height: 360px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.challenge-html h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 31px);
+}
+.content {
+  width: 640px;
+  background-color: #f3f3f3;
+  padding: 20px;
+  border-radius: 5px;
+}
+.content h4 {
+  margin-bottom: 20px;
+}
+.content p {
+  padding: 5px 0;
+}
+
+/* CODE BLOCK */
+.challenge-code {
+  width: 720px;
+  /* height: 1000px; */
+  background-color: #111;
+  border-radius: 5px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+code.lang-js {
+  width: 640px !important;
+  line-height: 10px !important;
+}
+
+span.pln {
+  display: inline-block;
+  width: auto;
+  height: 0;
+}
+pre.prettyprint {
+  background-color: #111 !important;
+}
+.linenums > li > span:first-child {
+  /* display: none; */
+  width: 15px !important;
+}
+span.blank {
+  display: inline-block;
+  width: 15px !important;
+}
+span.blank1 {
+  display: inline-block;
+  width: 30px;
+}
+.challenge-code li {
+  padding: 2px 0;
+}
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 {
+  list-style-type: decimal !important;
+}

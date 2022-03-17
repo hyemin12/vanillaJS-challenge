@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>바닐라JS 챌린지</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?autoload=true&skin=sunburst&lang=css"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&lang=sql&skin=desert"></script>
+  <link rel="stylesheet" href="./resizeCss.css">
+  </head>
+  <body>
+    <h1 class="title">바닐라JS 챌린지 #이벤트핸들러 CSS</h1>
+
+    <div class="challenge-wrapper">
+      <div class="column">
+        <div class="challenge-html">
+          <span class="name">broswer</span>
+          <div class="container"><h1>Hello!</h1></div>
+        </div>
+        <div class="content">
+          <h4>기능</h4>
+          <p>브라우저 크기에 따라 배경색상 변경</p>
+          <p>
+            - classList에서 class 추가하고, 제거하는 방법 - width 1301px 이상,
+            width 1000px 이상, width 999px 이하
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="challenge-code">
+          <ul class="file-list">
+            <li class="name">HTML</li>
+            <li class="name">CSS</li>
+            <li class="name  active">JAVASCRIPT</li>
+          </ul>
+          <ul class="tab-list">
+            <li class="tab-html">
+              <pre class="prettyprint linenums lang-html">
+                &lt;!DOCTYPE html>
+                <span class="blank"></span>&lt;head>
+                <span class="blank1"></span>&lt;title>Parcel Sandbox</title>
+                <span class="blank1"></span>&lt;meta charset="UTF-8" />
+                <span class="blank"></span>&lt;/head>
+
+                &lt;body>
+                <span class="blank"></span>&lt;div class="container">&lt;h1>Hello!&lt;/h1>&lt;/div>
+                <span class="blank"></span>&lt;script src="src/index.js">&lt;/script>
+                <span class="blank"></span>&lt;/body>   
+                &lt;/html>
+              </pre>
+            </li>
+            <li class="tab-css">
+              <pre class="prettyprint linenums lang-css">
+                <span></span>
+                body ,
+                h1 {
+                  <span class="blank"></span>margin: 0;
+                }
+                .container {
+                  <span class="blank"></span>width: 100vw;
+                  <span class="blank"></span>height: 100vh;
+                  <span class="blank"></span>background-color: skyblue;
+                }
+                h1 {
+                  <span class="blank"></span> padding-left: 20px;
+                  <span class="blank"></span> padding-top: 20px;
+                }
+                .container.violet {
+                  <span class="blank"></span> background-color: violet;
+                }
+                .container.orange {
+                  <span class="blank"></span> background-color: orange;
+                }
+              </pre>
+            </li>
+            <li class="tab-js active">
+              <pre class="prettyprint linenums lang-js">
+                const container = document.querySelector("div.container");
+
+                function handleResized() {
+                  <span class="blank"></span>let innerWidth = window.innerWidth;
+                  <span class="blank"></span>if (innerWidth > 1300) {
+                    <span class="blank"></span>  container.classList.add("orange");
+                    <span class="blank"></span>  container.classList.remove("violet");
+                  <span class="blank"></span>  <span class="blank"></span>} else if (innerWidth > 1000) {
+                    <span class="blank"></span>  container.classList.add("violet");
+                    <span class="blank"></span>  container.classList.remove("orange");
+                    <span class="blank"></span>} else {
+                      <span class="blank"></span>  container.classList.remove("orange", "violet");
+                    <span class="blank"></span>}
+                }
+                
+                <span></span>window.addEventListener("resize", handleResized);
+              </pre>
+            </li>     
+          </ul>
+      </div>
+    </div>
+    <script src="../index.js"></script>
+    <script src="./resizeCss.js"></script>
+  </body>
+</html>

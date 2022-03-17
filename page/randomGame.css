@@ -1,0 +1,14 @@
+h1,
+h4,
+p,
+input,
+button,
+div {
+  margin: 5px 5px;
+}
+.row {
+  display: flex;
+}
+input {
+  width: 100px;
+}
