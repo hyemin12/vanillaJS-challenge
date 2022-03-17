@@ -19,10 +19,25 @@ body {
   width: 100vw;
   min-width: 1300px;
   overflow-x: auto;
+  box-sizing: border-box;
 }
+
 .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 20px 0;
-  text-align: center;
+}
+.title a {
+  background-color: aquamarine;
+  padding: 3px;
+  color: #000;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+.title a:hover {
+  background-color: #0cecdd;
+  color: #fff;
 }
 .challenge-wrapper {
   display: flex;
@@ -45,7 +60,7 @@ body {
   text-align: center;
 }
 .challenge-wrapper .file-list li.name.active {
-  color: aqua;
+  color: aquamarine;
 }
 .tab-list > li {
   display: none;
@@ -62,8 +77,9 @@ body {
   text-align: center;
 }
 .challenge-wrapper a:hover {
-  color: aqua;
-  background-color: #666;
+  color: #000;
+  background-color: aquamarine;
+  border: 2px solid aquamarine;
 }
 .challenge-wrapper a .item-img {
   width: 300px;
