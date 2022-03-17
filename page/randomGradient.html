@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>바닐라JS 챌린지</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?autoload=true&skin=sunburst&lang=css"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&lang=sql&skin=desert"></script>
+  <style>
+    .challenge-html {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        position: relative;
+    }
+
+    .challenge-html button {
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  </style>
+  </head>
+  <body>
+    <h1 class="title">바닐라JS 챌린지 #그라데이션 - 랜덤색상</h1>
+
+    <div class="challenge-wrapper">
+      <div class="column">
+        <div class="challenge-html">
+          <span class="name">broswer</span>
+          <button>Give me color</button>
+        </div>
+        <div class="content">
+          <h4>기능</h4>
+          <p>버튼 클릭하면 랜덤한 색상 2가지로 이루어진 그라데이션 배경 만들기
+          </p>
+          <p>
+            - Math.random(), Math.floor()
+          </p>
+          <p>- linear-gradient (각도 or 방향, 색상1, 색상2)</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="challenge-code">
+          <ul class="file-list">
+            <li class="name">HTML</li>
+            <li class="name">CSS</li>
+            <li class="name  active">JAVASCRIPT</li>
+          </ul>
+          <ul class="tab-list">
+            <li class="tab-html">
+              <pre class="prettyprint linenums lang-html">
+                &lt;!DOCTYPE html>
+                <span class="blank"></span>&lt;head>
+                <span class="blank1"></span>&lt;title>Parcel Sandbox&lt;/title>
+                <span class="blank1"></span>&lt;meta charset="UTF-8" />
+                <span class="blank"></span>&lt;/head>
+
+                &lt;body>
+                <span class="blank"></span>&lt;button>Give me color&lt;/button>
+                <span class="blank"></span>&lt;script src="src/index.js">&lt;/script>
+                &lt;/body>   
+                &lt;/html>
+              </pre>
+            </li>
+            <li class="tab-css">
+              <pre class="prettyprint linenums lang-css">
+                <span></span>body {
+                  <span class="blank"></span>height: 100vh;
+                  <span class="blank"></span>width: 100%;
+                  <span class="blank"></span>display: flex;
+                  <span class="blank"></span>justify-content: center;
+                  <span class="blank"></span>align-items: center;
+                  <span class="blank"></span>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+                  <span class="blank"></span>  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+                }
+                
+                <span></span>button {
+                  <span class="blank"></span>font-size: 20px;
+                }
+              </pre>
+            </li>
+            <li class="tab-js active">
+              <pre class="prettyprint linenums lang-js">
+                const colors = [ "#ef5777", "#575fcf", "#4bcffa", "#34e7e4", "#0be881", "#f53b57",  
+                <span class="blank"></span>"#3c40c6", "#0fbcf9", "#00d8d6", "#05c46b", "#ffc048", "#ffdd59", "#ff5e57", 
+                <span class="blank"></span>"#d2dae2", "#485460", "#ffa801", "#ffd32a", "#ff3f34" ];
+
+                const btn = document.querySelector("button");
+
+                function handleGradient() {
+                  <span class="blank"></span>const random = Math.floor(Math.random() * colors.length);
+                  <span class="blank"></span>let random2 = Math.floor(Math.random() * colors.length);
+                  <span class="blank"></span>if (random !== random2) {
+                  <span class="blank"></span>  document.body.style.background = `linear-gradient(120deg,${colors[random]}, 
+                  <span class="blank"></span>    ${colors[random2]})`;
+                  <span class="blank"></span>} else {
+                  <span class="blank"></span>  random2 = Math.floor(Math.random() * colors.length);
+                  <span class="blank"></span>  document.body.style.background = `linear-gradient(120deg,${colors[random]}, 
+                  <span class="blank"></span>    ${colors[random2]})`;
+                  <span class="blank"></span>}
+                }
+                
+                <span></span>btn.addEventListener("click", handleGradient);
+                </pre>
+            </li>     
+          </ul>
+      </div>
+    </div>
+    <script src="../index.js"></script>
+    <script src="./randomGradient.js"></script>
+  </body>
+</html>

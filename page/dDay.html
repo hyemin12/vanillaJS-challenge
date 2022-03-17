@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>바닐라JS 챌린지</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?autoload=true&skin=sunburst&lang=css"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&lang=sql&skin=desert"></script>
+    <style>
+      body{font-family: sans-serif;}
+      .challenge-html h1{
+        text-align: center;
+      }
+      .js-clock {
+        align-items: start !important;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">바닐라JS 챌린지 #D-Day</h1>
+
+    <div class="challenge-wrapper">
+      <div class="column">
+        <div class="challenge-html">
+          <span class="name">broswer</span>
+          <h1>Time Until Christmas Eve</h1>
+          <h2 class="js-clock"></h2>
+        </div>
+        <div class="content">
+          <h4>기능</h4>
+          <p>- 크리스마스까지 남은 D-day 구하기 (2022:12:25)
+          </p>
+          <p>
+            - 
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="challenge-code">
+          <ul class="file-list">
+            <li class="name">HTML</li>
+            <li class="name">CSS</li>
+            <li class="name  active">JAVASCRIPT</li>
+          </ul>
+          <ul class="tab-list">
+            <li class="tab-html">
+              <pre class="prettyprint linenums lang-html">
+                &lt;!DOCTYPE html>
+                <span class="blank"></span>&lt;head>
+                <span class="blank1"></span>&lt;title>Parcel Sandbox&lt;/title>
+                <span class="blank1"></span>&lt;meta charset="UTF-8" />
+                <span class="blank"></span>&lt;/head>
+
+                &lt;body>
+                <span class="blank"></span>&lt;h1>Time Until Christmas Eve &lt;/h1>
+                <span class="blank"></span>&lt;h2 class="js-clock"> &lt;/h2>
+                <span class="blank"></span>&lt;script src="src/index.js">&lt;/script>
+                &lt;/body>   
+                &lt;/html>
+              </pre>
+            </li>
+            <li class="tab-css">
+              <pre class="prettyprint linenums lang-css">
+                <span></span>body {
+                <span class="blank"></span>font-family: 'sans-serif';
+                <span></span>}
+              </pre>
+            </li>
+            <li class="tab-js active">
+              <pre class="prettyprint linenums lang-js">
+                const clockTitle = document.querySelector(".js-clock");
+
+                function count() {
+                  <span class="blank"></span>const xMas = new Date("2022-12-25 00:00:00");
+                  <span class="blank"></span>const today = new Date();
+                  <span class="blank"></span>const gap = xMas - today;
+                  <span class="blank"></span>const day = Math.floor(gap / (1000 * 60 * 60 * 24));
+                  <span class="blank"></span>const hours = Math.floor((gap / (1000 * 60 * 60)) % 24);
+                  <span class="blank"></span>const minutes = Math.floor((gap / (1000 * 60)) % 60);
+                  <span class="blank"></span>const seconds = Math.floor((gap / 1000) % 60);
+                  <span class="blank"></span>clockTitle.innerText = `${day}d ${hours}h ${minutes}m ${seconds}s`;
+                }
+
+                <span></span>count();
+                <span></span>setInterval(count, 1000);
+                </pre>
+            </li>     
+          </ul>
+      </div>
+    </div>
+    <script src="../index.js"></script>
+    <script src="./dDay.js"></script>
+  </body>
+</html>
